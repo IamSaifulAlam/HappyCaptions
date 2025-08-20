@@ -1,0 +1,211 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 100% 99%; /* #F8F8FF - Light off-white */
+    --foreground: 240 6% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 6% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 6% 10%;
+    --primary: 240 60% 90%; /* #E6E6FA - Soft lavender */
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 350 80% 96%;
+    --secondary-foreground: 350 50% 30%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 349 100% 86%; /* #FFB3C6 - Muted rose */
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.8rem;
+    --chart-1: 240 5.9% 10%;
+    --chart-2: 240 4.8% 95.9%;
+    --chart-3: 240 4.8% 93%;
+    --chart-4: 240 3.8% 46.1%;
+    --chart-5: 240 5.2% 96.1%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .theme-pink {
+    --background: 350 100% 98%; /* Light Pink */
+    --foreground: 350 50% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 350 50% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 350 50% 30%;
+    --primary: 348 83% 61%; /* Hot Pink */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 350 80% 96%;
+    --secondary-foreground: 350 50% 30%;
+    --muted: 350 80% 96%;
+    --muted-foreground: 350 30% 50%;
+    --accent: 348 83% 90%; /* Lighter Pink Accent */
+    --accent-foreground: 348 83% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 350 80% 90%;
+    --input: 350 80% 90%;
+    --ring: 348 83% 61%;
+    --switch-blue: 208 83% 61%;
+  }
+
+  .theme-blue {
+    --background: 210 100% 98%;
+    --foreground: 210 50% 30%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 50% 30%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 50% 30%;
+    --primary: 208 83% 61%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 210 80% 96%;
+    --secondary-foreground: 210 50% 30%;
+    --muted: 210 80% 96%;
+    --muted-foreground: 210 30% 50%;
+    --accent: 208 83% 90%;
+    --accent-foreground: 208 83% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 80% 90%;
+    --input: 210 80% 90%;
+    --ring: 208 83% 61%;
+    --switch-blue: 348 83% 61%; /* Hot Pink for the switched state */
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 348 83% 61%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 348 83% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 348 83% 61%;
+    --radius: 0.8rem;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .floating-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+
+  .floating-shapes .shape {
+    position: absolute;
+    display: block;
+    list-style: none;
+    color: hsl(var(--primary) / 0.4);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .floating-shapes .shape.animate-up {
+    animation-name: animate-up;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  .floating-shapes .shape.static-shape {
+    opacity: 0.2; /* Initial opacity for pre-loaded shapes */
+  }
+  
+  @keyframes animate-up {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-120vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+
+  @keyframes pulse-alt {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .custom-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .custom-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: hsl(var(--accent) / 0.5);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: hsl(var(--primary) / 0.5);
+      border-radius: 10px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: hsl(var(--primary));
+    }
+  }
+}
