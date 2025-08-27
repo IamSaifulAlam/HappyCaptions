@@ -2,7 +2,10 @@
 
 HappyCaptions is a modern, AI-powered social media assistant designed to help you create engaging content effortlessly. Simply upload an image, provide some context, and let HappyCaptions generate captivating captions and relevant hashtags tailored to your brand's voice and style.
 
-![HappyCaptions UI Placeholder](https://placehold.co/800x450.png)
+![HappyCaptions UI Placeholder](Preview/Screenshot_1.png)
+![HappyCaptions UI Placeholder](Preview/Screenshot_2.png)
+![HappyCaptions UI Placeholder](Preview/Screenshot_3.png)
+
 *A placeholder image of the HappyCaptions user interface.*
 
 ---
