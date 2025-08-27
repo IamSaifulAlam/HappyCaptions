@@ -6,8 +6,6 @@ HappyCaptions is a modern, AI-powered social media assistant designed to help yo
 ![HappyCaptions UI Placeholder](Previews/Screenshot_2.png)
 ![HappyCaptions UI Placeholder](Previews/Screenshot_3.png)
 
-*A placeholder image of the HappyCaptions user interface.*
-
 ---
 
 ## 🌟 Features
